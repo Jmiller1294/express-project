@@ -5,11 +5,11 @@ const app = express();
 const PORT = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Helloooooo')
+  res.send('Hello thereeee youuuuu')
 })
 
-app.get('/messages', (req, res) => {
-  res.send('<ul><li>Hellooo</li></ul>')
+app.get('/friends', (req, res) => {
+  res.send('<ul><li>Hello there.fsdfsdffsdfsdf hpe are ypu</li></ul>')
 })
 
 
