@@ -1,4 +1,6 @@
 const express = require('express');
+const messagesController = require('./controllers/messages.controller');
+const friendsController = require('./controllers/friends.controller');
 
 const app = express();
 
@@ -8,11 +10,12 @@ app.get('/', (req, res) => {
   res.send('Hello thereeee youuuuu')
 })
 
-app.get('/friends', (req, res) => {
-  res.send('<ul><li>Hello there.fsdfsdffsdfsdf hpe are ypu</li></ul>')
-})
+app.get('/messages', messagesController.getMessages);
+app.post('/messages', messagesController.postMessage);
 
-
+app.get('/friends', friendsController.getFriends);
+app.post('/friends', friendsController.postFriends);
+ 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`)
 })
